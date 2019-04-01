@@ -5,7 +5,7 @@ import './App.css';
 class App extends Component {
   state = {
     todos: [
-      { id: 1, title: 'take out trash', completed: false },
+      { id: 1, title: 'take out trash', completed: true },
       { id: 2, title: 'watch movie with driends', completed: false },
       { id: 3, title: 'make react app', completed: false }
     ]
