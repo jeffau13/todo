@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-const itemStyle = {
-  backgroundColor: '#f4f4f4'
-};
 export class Todoitem extends Component {
   getStyle = () => {
     return {
