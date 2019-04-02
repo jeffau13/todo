@@ -4,12 +4,23 @@ export default class AddTodo extends Component {
   state = {
     title: ''
   };
+
   updateTitle = e => {
     this.setState({ [e.target.name]: e.target.value });
+    /* 
+    setting e.target.name to e.target.value allows for setting
+    multiple states as long as the name in the form matches state key
+     */
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+    this.props.addTodo(this.state.title);
+    this.setState({ title: '' });
   };
   render() {
     return (
-      <form style={{ display: 'flex' }}>
+      <form onSubmit={this.onSubmit} style={{ display: 'flex' }}>
         <input
           type="text"
           name="title"
